@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Customer Churn Prediction</h1>
+
+        <!-- Form Section -->
+        <div class="input-section">
+            <h3>Customer Data</h3>
+            <form id="churnForm">
+                <label for="creditScore">Credit Score:</label>
+                <input type="number" id="creditScore" name="CreditScore" required>
+
+                <label for="geography">Geography:</label>
+                <input type="number" id="geography" name="Geography" required>
+
+                <label for="gender">Gender (0=Female, 1=Male):</label>
+                <input type="number" id="gender" name="Gender" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="Age" required>
+
+                <label for="tenure">Tenure:</label>
+                <input type="number" id="tenure" name="Tenure" required>
+
+                <label for="balance">Balance:</label>
+                <input type="number" id="balance" name="Balance" required>
+
+                <label for="numOfProducts">Num of Products:</label>
+                <input type="number" id="numOfProducts" name="NumOfProducts" required>
+
+                <label for="hasCrCard">Has Credit Card (0=No, 1=Yes):</label>
+                <input type="number" id="hasCrCard" name="HasCrCard" required>
+
+                <label for="isActiveMember">Is Active Member (0=No, 1=Yes):</label>
+                <input type="number" id="isActiveMember" name="IsActiveMember" required>
+
+                <label for="estimatedSalary">Estimated Salary:</label>
+                <input type="number" id="estimatedSalary" name="EstimatedSalary" required>
+
+                <button type="submit">Predict Churn</button>
+            </form>
+        </div>
+
+        <!-- Result Section -->
+        <div class="result-section">
+            <h3>Prediction Result</h3>
+            <p id="result"></p>
+        </div>
+
+        <!-- Graph Section -->
+        <div class="chart-section">
+            <h3>Churn Probability Graph</h3>
+            <canvas id="churnChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
